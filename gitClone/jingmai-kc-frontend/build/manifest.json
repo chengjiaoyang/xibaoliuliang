@@ -1,0 +1,38 @@
+{
+  "name": "__MSG_appName__",
+  "manifest_version": 2,
+  "version": "0.2.27",
+  "description": "__MSG_appDesc__",
+  "default_locale": "ja",
+  "browser_action": {
+     "default_icon": "img/icon16.png"
+     //"default_popup":"dist/index.html"
+  },
+  "icons":
+  {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  // "content_scripts": [
+  //   {
+  //     "matches": [ "*://search.rakuten.co.jp/search/mall/*" ],
+  //     "js": ["config.js" ,"public.js", "jquery-3.2.1.min.js", "jquery_reveal/jquery.reveal.js", "script.js"],
+  //     "css": ["jquery_reveal/reveal.css", "style.css"],
+  //     "run_at": "document_end"
+  //   }
+  // ],
+  "permissions":[
+      "management",
+      "tabs",
+      "storage",
+      "*://*.xibao100.com/",
+      "*://*.rakuten.co.jp/"
+  ],
+  "background": {
+    "scripts": [
+      "dist/background.js"
+    ]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

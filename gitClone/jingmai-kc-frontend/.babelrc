@@ -1,0 +1,7 @@
+{
+  "presets": ["vue-app", "es2015", "stage-0"],
+  "plugins": [ "transform-async-to-generator", ["transform-runtime", {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true}]]
+}

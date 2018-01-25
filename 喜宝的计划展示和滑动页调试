@@ -1,0 +1,159 @@
+<template>
+  <div id="app">
+    <h4 class="top">计划</h4>
+    <swiper :options="swiperOption" ref="mySwiper">
+        <swiper-slide >
+            <ul>
+              <li class="dot">花费</li>
+              <!-- <li  v-for="item in items">{{item.cost}}</li> -->
+            </ul>
+
+            <div class="" v-for="item in items">
+              <p style="text-align:left">{{item.campaign_name}}</p>
+              {{item.cost}}
+            </div>
+        </swiper-slide>
+        <swiper-slide >
+            <ul>
+              <li class="dot">点击量</li>
+              <!-- <li  v-for="item in items">{{item.clicks}}</li> -->
+            </ul>
+      
+            <div class="" v-for="item in items">
+              {{item.cost}}
+            </div>
+        </swiper-slide>
+        <swiper-slide >
+            <ul>
+              <li class="dot">展现量</li>
+             <!--  <li  v-for="item in items">{{item.clicks}}</li> -->
+            </ul>
+        </swiper-slide>
+        <swiper-slide >
+            <ul>
+              <li class="dot">点击率</li>
+              <!-- <li  v-for="item in items">{{item.clicks}}</li> -->
+            </ul>
+        </swiper-slide>
+        <swiper-slide >
+            <ul>
+              <li class="dot">平均点击花费</li>
+             <!--  <li  v-for="item in items">{{item.clicks}}</li> -->
+            </ul>
+        </swiper-slide>
+        <swiper-slide >
+              <ul>
+                 <li class="dot">总成交比数</li>
+                <!--  <li  v-for="item in items">{{item.clicks}}</li> -->
+              </ul>
+          </swiper-slide>
+          <swiper-slide >
+               <ul>
+                  <li class="dot">点击量</li>
+                 <!--  <li  v-for="item in items">{{item.clicks}}</li> -->
+              </ul>
+          </swiper-slide>
+          <swiper-slide >
+                <ul>
+                  <li class="dot">点击量</li>
+                 <!--  <li  v-for="item in items">{{item.clicks}}</li> -->
+                </ul>
+          </swiper-slide>
+  </swiper>
+<div style="width:100%;clear:left"></div>
+    <div>{{msg}}</div>
+  </div>
+</template>
+
+<script>
+import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+export default {
+  name:'recharge',
+  components: {
+    swiper,
+    swiperSlide
+  },
+  data:function (){
+      return{
+         msg:'hello 充值.......',
+         swiperOption: {
+            slidesPerView: 3,
+        },
+        objects:[
+            {title:'花费', data:null},
+            {title:'点击量', data:'0'},
+            {title:'展现量', data:'0'},
+            {title:'点击率', data:'0'},
+            {title:'平均点击花费', data:'0'},
+            {title:'总成交比数', data:'0'},
+            {title:'总成交金额', data:'0'},
+            {title:'投入产出比', data:'0'},
+            {title:'点击转化率', data:'0'},
+            {title:'总购物车数', data:'0'},
+            {title:'总收藏数', data:'0'},
+        ],
+        items:[{ad_type:3,campaign_id:111885590,campaign_name:"15日推广",campaign_status:2,campaign_visitor_cnt:48,clicks:57,cost:61.75,cpc:1.08,cpm:0.2,ctr:0.02,depth_passenger_cnt:2,
+        impressions:311991,is_order_or_click:"点击",is_today_or_15days:"当天",mobile_type:"全部",order_status_category:"全部订单",put_type:"商品",visit_page_cnt:50,visit_time_range:9.9},
+        {ad_type:3,campaign_id:111885590,campaign_name:"15日推广",campaign_status:2,campaign_visitor_cnt:48,clicks:57,cost:61.75,cpc:1.08,cpm:0.2,ctr:0.02,depth_passenger_cnt:2,
+        impressions:311991,is_order_or_click:"点击",is_today_or_15days:"当天",mobile_type:"全部",order_status_category:"全部订单",put_type:"商品",visit_page_cnt:50,visit_time_range:9.9},
+        {ad_type:3,campaign_id:111885590,campaign_name:"16日推广",campaign_status:2,campaign_visitor_cnt:48,clicks:57,cost:61.75,cpc:1.08,cpm:0.2,ctr:0.02,depth_passenger_cnt:2,
+        impressions:311991,is_order_or_click:"点击",is_today_or_15days:"当天",mobile_type:"全部",order_status_category:"全部订单",put_type:"商品",visit_page_cnt:50,visit_time_range:9.9},
+        {ad_type:3,campaign_id:111885590,campaign_name:"17日推广",campaign_status:2,campaign_visitor_cnt:48,clicks:57,cost:61.75,cpc:1.08,cpm:0.2,ctr:0.02,depth_passenger_cnt:2,
+        impressions:311991,is_order_or_click:"点击",is_today_or_15days:"当天",mobile_type:"全部",order_status_category:"全部订单",put_type:"商品",visit_page_cnt:50,visit_time_range:9.9},
+        {ad_type:3,campaign_id:111885590,campaign_name:"18日推广",campaign_status:2,campaign_visitor_cnt:48,clicks:57,cost:61.75,cpc:1.08,cpm:0.2,ctr:0.02,depth_passenger_cnt:2,
+        impressions:311991,is_order_or_click:"点击",is_today_or_15days:"当天",mobile_type:"全部",order_status_category:"全部订单",put_type:"商品",visit_page_cnt:50,visit_time_range:9.9},
+        {ad_type:3,campaign_id:111885590,campaign_name:"19日推广",campaign_status:2,campaign_visitor_cnt:48,clicks:57,cost:61.75,cpc:1.08,cpm:0.2,ctr:0.02,depth_passenger_cnt:2,
+        impressions:311991,is_order_or_click:"点击",is_today_or_15days:"当天",mobile_type:"全部",order_status_category:"全部订单",put_type:"商品",visit_page_cnt:50,visit_time_range:9.9}
+        ]
+      }
+
+  }
+}
+
+</script>
+
+<style scoped>
+   /*  .top{
+        width:100%;
+        height:70px;
+        line-height: 70px;
+    }
+    .swiper-container ul.menu_box{
+        display: block;
+        width:1000%;
+    }
+    .swiper-container ul.menu_box li{
+        padding:10px 110px ;
+        background:url('../assets/css/line.png') no-repeat bottom right;
+        line-height:70px;
+        background-size:2px;
+        float:left;
+        display: block;
+        border-bottom:2px solid orange;
+        text-align: center;
+    } */
+    ul{
+      display:block;
+      width:100%;
+      display:flex;
+    }
+    ul .dot{
+      line-height:100px;
+      flex-grow:1;
+      text-align: center;
+      border-bottom:#f90 4px solid;
+      position: relative;
+      font-size:28px;
+    }
+    ul .dot:nth-child(1):after, ul .dot:nth-child(2):after, ul .dot:nth-child(3):after, ul .dot:nth-child(4):after, ul .dot:nth-child(5):after,
+    ul .dot:nth-child(6):after, ul .dot:nth-child(7):after, ul .dot:nth-child(8):after, ul .dot:nth-child(9):after{
+      content:"";
+      width:4px;
+      height:30px;
+      background:#f90;
+      position: absolute;
+      right:0;
+      bottom:0;
+    }
+</style>
